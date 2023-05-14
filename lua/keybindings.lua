@@ -11,7 +11,7 @@ map("n", "sv", ":vsp<CR>", opt)
 map("n", "sh", ":sp<CR>", opt)
 -- 关闭当前
 map("n", "sc", "<C-w>c", opt)
-map("n",  "<leader>q", ":q", opt)
+map("n",  "<leader>q", ":q<CR>", opt)
 -- 关闭其他
 map("n", "so", "<C-w>o", opt)
 -- Alt + hjkl  窗口之间跳转
