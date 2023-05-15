@@ -39,7 +39,7 @@ require("mason-lspconfig").setup({
 
 local servers = {
   lua_ls = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
-  --clangd = require("lsp.config.clangd"),
+  clangd = require("lsp.config.clangd"),
 }
 
 for name, config in pairs(servers) do
@@ -51,3 +51,38 @@ for name, config in pairs(servers) do
     lspconfig[name].setup({})
   end
 end
+
+
+--[[
+   [-- 一定要在前面先加载上
+   [local lspconfig = require('lspconfig')
+   [
+   [require("mason-lspconfig").setup_handlers({
+   [  function (server_name)
+   [    require("lspconfig")[server_name].setup{}
+   [  end,
+   [  -- Next, you can provide targeted overrides for specific servers.
+   [  ["lua_ls"] = function ()
+   [    lspconfig.lua_ls.setup {
+   [      settings = {
+   [        Lua = {
+   [          diagnostics = {
+   [            globals = { "vim" }
+   [          }
+   [        }
+   [    }
+   [  }
+   [  end,
+   [  ["clangd"] = function ()
+   [    lspconfig.clangd.setup {
+   [      cmd = {
+   [        "clangd",
+   [        "--header-insertion=never",
+   [        "--query-driver=/opt/homebrew/opt/llvm/bin/clang",
+   [        "--all-scopes-completion",
+   [        "--completion-style=detailed",
+   [      }
+   [    }
+   [  end
+   [})
+   ]]
