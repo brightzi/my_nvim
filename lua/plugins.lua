@@ -41,9 +41,10 @@ return require('packer').startup(function(use)
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
 
-  -- lspconfig
-  use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
-
+    -- lspconfig
+    use({ "neovim/nvim-lspconfig" })
+    use({ "williamboman/mason.nvim" })
+    use({ "williamboman/mason-lspconfig.nvim" })
 
 
 end)
