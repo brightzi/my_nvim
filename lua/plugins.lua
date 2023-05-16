@@ -40,25 +40,27 @@ return require('packer').startup(function(use)
     -- nvim-treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
-    
-        use("hrsh7th/nvim-cmp")
-    -- Snippet 引擎
-    -- use("L3MON4D3/LuaSnip")
-    -- use("saadparwaiz1/cmp_luasnip")
-    -- 补全源
-    use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-    use("hrsh7th/cmp-path") -- { name = 'path' }
-    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
-    use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
-     use("hrsh7th/cmp-nvim-lsp")
-
 
     -- lspconfig
     use({ "neovim/nvim-lspconfig" })
     use({ "williamboman/mason.nvim" })
     use({ "williamboman/mason-lspconfig.nvim" })
+
+    use("hrsh7th/nvim-cmp")
+    -- 补全源
+    use("hrsh7th/vim-vsnip")
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+
+    use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
+    use("hrsh7th/cmp-nvim-lsp")
+
+    -- Snippet 引擎
+     use("L3MON4D3/LuaSnip")
+     use("saadparwaiz1/cmp_luasnip")
 
 
 end)
