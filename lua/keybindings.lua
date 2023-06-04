@@ -27,11 +27,6 @@ map("n", "nw", "<C-w><C-w>", opt)
 -- 左右比例控制
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
-map("n", "s,", ":vertical resize -20<CR>", opt)
-map("n", "s.", ":vertical resize +20<CR>", opt)
--- 上下比例
-map("n", "sj", ":resize +10<CR>", opt)
-map("n", "sk", ":resize -10<CR>", opt)
 map("n", "<C-Down>", ":resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
 -- 等比例
@@ -62,9 +57,9 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
 -- 查找文件
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<leader>f", ":Telescope find_files<CR>", opt)
 -- 全局搜索
-map("n", "<leader>f", ":Telescope live_grep<CR>", opt)
+map("n", "<C-p>", ":Telescope live_grep<CR>", opt)
 
 
 
@@ -83,7 +78,7 @@ pluginKeys.telescopeList = {
     ["<C-n>"] = "cycle_history_next",
     ["<C-p>"] = "cycle_history_prev",
     -- 关闭窗口
-    ["<C-c>"] = "close",
+    -- ["<C-c>"] = "close",
     -- 预览窗口上下滚动
     ["<C-u>"] = "preview_scrolling_up",
     ["<C-d>"] = "preview_scrolling_down",

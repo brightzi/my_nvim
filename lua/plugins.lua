@@ -56,11 +56,16 @@ return require('packer').startup(function(use)
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
     use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
-    use("hrsh7th/cmp-nvim-lsp")
 
     -- Snippet 引擎
      use("L3MON4D3/LuaSnip")
      use("saadparwaiz1/cmp_luasnip")
+
+   config = {
+        git = {
+            default_url_format = "git@github.com:%s",
+         },
+    }
 
 
 end)
