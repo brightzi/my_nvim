@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
     -- tokyonight
     use("folke/tokyonight.nvim")
 
-    use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
+    use({"ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
 
     
     use("dracula/vim")
@@ -42,9 +42,9 @@ return require('packer').startup(function(use)
 
 
     -- lspconfig
-    use({ "neovim/nvim-lspconfig" })
-    use({ "williamboman/mason.nvim" })
-    use({ "williamboman/mason-lspconfig.nvim" })
+    -- use({ "neovim/nvim-lspconfig" })
+    -- use({ "williamboman/mason.nvim" })
+    -- use({ "williamboman/mason-lspconfig.nvim" })
 
     use("hrsh7th/nvim-cmp")
     -- 补全源
