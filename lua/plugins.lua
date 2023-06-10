@@ -5,10 +5,12 @@ vim.cmd [[packadd packer.nvim]]
 
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  use 'scrooloose/nerdcommenter'
+    use 'scrooloose/nerdcommenter'
+
+    use({'vladdoster/remember.nvim', config = [[ require('remember') ]] })
  
     -- tokyonight
     use("folke/tokyonight.nvim")
