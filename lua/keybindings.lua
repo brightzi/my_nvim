@@ -23,6 +23,8 @@ map("n", "<A-l>", "<C-w>l", opt)
 map("n", "nw", "<C-w><C-w>", opt)
 
 
+--utf-8
+map("n", "<leader>u", ":e ++enc=utf-8<CR>", opt)
 
 -- 左右比例控制
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
